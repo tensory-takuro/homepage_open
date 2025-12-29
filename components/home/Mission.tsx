@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import ScrollFadeIn from "@/components/ui/ScrollFadeIn";
 
 export default function Mission() {
     return (
@@ -18,17 +21,23 @@ export default function Mission() {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-4xl">
-                    <h2 className="text-sky-blue text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-6">Mission</h2>
-                    <p className="text-3xl md:text-5xl font-bold leading-tight mb-10">
-                        知を循環し、<br className="md:hidden" />
-                        組織の成長を促進する
-                    </p>
-                    <p className="text-white/90 text-base md:text-lg leading-loose mb-12 max-w-2xl">
-                        私たちは、現場に眠る暗黙知や情熱を、<br className="hidden md:block" />
-                        AIとテクノロジーの力で形式知へと昇華させます。<br />
-                        それは単なる効率化ではなく、<br className="hidden md:block" />
-                        組織全体のポテンシャルを解放する「知の循環」の創造です。
-                    </p>
+                    <ScrollFadeIn direction="up" delay={0}>
+                        <h2 className="text-sky-blue text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-6">Mission</h2>
+                    </ScrollFadeIn>
+                    <ScrollFadeIn direction="up" delay={0.1}>
+                        <p className="text-3xl md:text-5xl font-bold leading-tight mb-10">
+                            知を循環し、<br className="md:hidden" />
+                            組織の成長を促進する
+                        </p>
+                    </ScrollFadeIn>
+                    <ScrollFadeIn direction="up" delay={0.2}>
+                        <p className="text-white/90 text-base md:text-lg leading-loose mb-12 max-w-2xl">
+                            私たちは、現場に眠る暗黙知や情熱を、<br className="hidden md:block" />
+                            AIとテクノロジーの力で形式知へと昇華させます。<br />
+                            それは単なる効率化ではなく、<br className="hidden md:block" />
+                            組織全体のポテンシャルを解放する「知の循環」の創造です。
+                        </p>
+                    </ScrollFadeIn>
                 </div>
             </div>
         </section>

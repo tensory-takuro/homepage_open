@@ -33,8 +33,11 @@ export default function Hero() {
                             alt="Hero Background"
                             fill
                             className="object-cover"
-                            priority
-                            quality={90}
+                            priority={index === 0}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            fetchPriority={index === 0 ? "high" : "auto"}
+                            quality={75}
+                            sizes="100vw"
                         />
                     </motion.div>
                 </AnimatePresence>

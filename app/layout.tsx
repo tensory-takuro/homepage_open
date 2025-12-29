@@ -65,6 +65,14 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* Preload LCP image for faster loading */}
+        <link
+          rel="preload"
+          href="/chemical_plant_men_v2_05.jpg"
+          as="image"
+          type="image/jpeg"
+          fetchPriority="high"
+        />
         {/* DNS Prefetch & Preconnect for faster loading */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />

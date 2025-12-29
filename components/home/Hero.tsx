@@ -33,9 +33,7 @@ export default function Hero() {
                             alt="Hero Background"
                             fill
                             className="object-cover"
-                            priority={index === 0}
-                            loading={index === 0 ? "eager" : "lazy"}
-                            fetchPriority={index === 0 ? "high" : "auto"}
+                            priority
                             quality={75}
                             sizes="100vw"
                         />

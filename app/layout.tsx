@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: "swap", // フォント読み込み中もテキスト表示
+  display: "swap",
 });
 
 const montserrat = Montserrat({
@@ -18,7 +18,6 @@ const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
   display: "swap",
-  preload: true, // 日本語フォントをプリロード
 });
 
 import Header from "@/components/layout/Header";
@@ -64,25 +63,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <head>
-        {/* Preload LCP image for faster loading */}
-        <link
-          rel="preload"
-          href="/chemical_plant_men_v2_05.webp"
-          as="image"
-          type="image/webp"
-          fetchPriority="high"
-        />
-        {/* DNS Prefetch & Preconnect for faster loading */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <StructuredData />
-      </head>
       <body
         className={`${inter.variable} ${montserrat.variable} ${notoSansJP.variable} font-sans antialiased bg-white text-gray-1`}
       >
+        <StructuredData />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

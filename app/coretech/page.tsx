@@ -3,8 +3,12 @@ import SECIDiagram from "./SECIDiagram";
 import CoretechContent from "./CoretechContent";
 
 export const metadata: Metadata = {
-    title: "Core Technology - Tensory",
-    description: "Tensoryのコアテクノロジー「ナレッジエンジニアリング」- 暗黙知を形式知へ変換し、AIと人間が共に成長する知の循環を実現",
+    title: "コアテクノロジー - ナレッジエンジニアリング",
+    description: "Tensoryのコアテクノロジー「ナレッジエンジニアリング」。データストラクチャリングとコンテキストエンジニアリングで暗黙知を形式知に変換し、AIと人間が共に成長する知の循環を実現。SECIモデルをAIで進化。",
+    openGraph: {
+        title: "コアテクノロジー - ナレッジエンジニアリング | Tensory",
+        description: "暗黙知を形式知に変換し、AIと人間が共に成長する知の循環を実現",
+    },
 };
 
 export default function CoretechPage() {

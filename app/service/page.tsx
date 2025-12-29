@@ -4,8 +4,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Service - Tensory",
-    description: "Tensoryの事業内容（AIエンパワーメント、セールスイネーブルメント、ナレッジトランスファー）",
+    title: "事業内容・サービス",
+    description: "Tensoryの生成AI導入支援サービス。AIエンパワーメント（AI業務活用）、セールスイネーブルメント（営業支援AI）、ナレッジトランスファー（知識継承AI）で企業の成長を支援します。",
+    openGraph: {
+        title: "事業内容・サービス | Tensory",
+        description: "生成AI導入支援、営業支援AI、知識継承AIで企業の成長を支援",
+    },
 };
 
 export default function ServicePage() {

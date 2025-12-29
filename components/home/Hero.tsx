@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
-    const images = ["/chemical_plant_men_v2_05.jpg", "/sales_meeting.jpg"];
+    const images = ["/chemical_plant_men_v2_05.webp", "/sales_meeting.webp"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

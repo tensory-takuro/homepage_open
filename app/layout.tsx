@@ -68,9 +68,9 @@ export default function RootLayout({
         {/* Preload LCP image for faster loading */}
         <link
           rel="preload"
-          href="/chemical_plant_men_v2_05.jpg"
+          href="/chemical_plant_men_v2_05.webp"
           as="image"
-          type="image/jpeg"
+          type="image/webp"
           fetchPriority="high"
         />
         {/* DNS Prefetch & Preconnect for faster loading */}

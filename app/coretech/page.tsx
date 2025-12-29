@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SECIDiagram from "./SECIDiagram";
 import CoretechContent from "./CoretechContent";
+import CoretechHeader from "./CoretechHeader";
 
 export const metadata: Metadata = {
     title: "コアテクノロジー - ナレッジエンジニアリング",
@@ -15,23 +16,7 @@ export default function CoretechPage() {
     return (
         <div className="pt-32">
             {/* Page Header */}
-            <div className="container mx-auto px-6 mb-20">
-                <h1 className="text-4xl md:text-5xl font-bold text-tensor-blue mb-4">Core Technology</h1>
-                <p className="text-gray-500 font-bold tracking-widest uppercase">ナレッジエンジニアリング</p>
-            </div>
-
-            {/* Overview */}
-            <section className="container mx-auto px-6 mb-24">
-                <div className="max-w-4xl">
-                    <p className="text-xl md:text-2xl text-gray-1 leading-relaxed font-medium">
-                        Tensoryのコアテクノロジーである
-                        <span className="text-tensor-blue font-bold">「ナレッジエンジニアリング」</span>
-                        は、企業に眠る暗黙知を形式知へと変換し、AIと人間が共に成長する
-                        <span className="text-tensor-blue font-bold">「知の循環」</span>
-                        を実現する技術体系です。
-                    </p>
-                </div>
-            </section>
+            <CoretechHeader />
 
             {/* SECI Model Section with Diagrams */}
             <section className="bg-tensor-blue py-24 mb-24">

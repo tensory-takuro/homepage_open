@@ -12,7 +12,7 @@ const formSchema = z.object({
     email: z.string().email({ message: "正しいメールアドレスを入力してください" }),
     phone: z.string().optional(),
     type: z.string().min(1, { message: "お問い合わせ種別を選択してください" }),
-    message: z.string().min(10, { message: "お問い合わせ内容は10文字以上で入力してください" }),
+    message: z.string().min(1, { message: "お問い合わせ内容を入力してください" }),
     privacy: z.boolean().refine((val) => val === true, { message: "プライバシーポリシーへの同意が必要です" }),
 });
 

@@ -36,14 +36,26 @@ export default function ContactPage() {
         setIsSubmitting(true);
         setError(null);
 
-        // Simulate API call
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-            console.log("Form Data:", data);
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "送信に失敗しました");
+            }
+
             setIsSubmitted(true);
             reset();
         } catch (e) {
-            setError("送信中にエラーが発生しました。時間をおいて再度お試しください。");
+            const errorMessage = e instanceof Error ? e.message : "送信中にエラーが発生しました。時間をおいて再度お試しください。";
+            setError(errorMessage);
         } finally {
             setIsSubmitting(false);
         }

@@ -54,7 +54,7 @@ export default function Hero() {
                         transition={{ delay: 0.5, duration: 0.8 }}
                         className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-widest leading-tight mb-8 text-shadow"
                     >
-                        <span className="whitespace-nowrap">企業の知識を『成果』に変える</span><br />
+                        <span className="md:whitespace-nowrap">企業の知識を『成果』に変える</span><br />
                         生成AIパートナー
                     </motion.h1>
 

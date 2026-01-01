@@ -73,11 +73,11 @@ export default function ServiceContent() {
                     className={`${service.bgColor ? `${service.bgColor} py-24` : 'container mx-auto px-6'} mb-32 scroll-mt-32`}
                 >
                     <div className={service.bgColor ? "container mx-auto px-6" : ""}>
-                        <div className={`flex flex-col md:flex-row gap-12 items-center ${service.reverse ? '' : ''}`}>
+                        <div className={`flex flex-col md:flex-row gap-12 items-center`}>
                             <ScrollFadeIn 
                                 direction={service.reverse ? "right" : "left"} 
                                 delay={0.1}
-                                className={`md:w-1/2 ${service.reverse ? '' : 'order-2 md:order-1'}`}
+                                className={`md:w-1/2 order-2 ${service.reverse ? 'md:order-2' : 'md:order-1'}`}
                             >
                                 <div className="flex items-center gap-4 mb-4">
                                     <span className="text-tensor-blue font-bold text-sm tracking-widest uppercase border border-tensor-blue px-3 py-1 rounded-full">Service {service.number}</span>
@@ -104,7 +104,7 @@ export default function ServiceContent() {
                             <ScrollFadeIn 
                                 direction={service.reverse ? "left" : "right"} 
                                 delay={0.2}
-                                className={`md:w-1/2 flex justify-center ${service.reverse ? '' : 'order-1 md:order-2'}`}
+                                className={`md:w-1/2 flex justify-center order-1 ${service.reverse ? 'md:order-1' : 'md:order-2'}`}
                             >
                                 <Image 
                                     src={service.image} 
